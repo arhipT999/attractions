@@ -89,4 +89,6 @@ def prod(message):
     message_to_save = message.text
     if message_to_save in dosto.keys():
         bot.send_message(message.chat.id, dosto[message_to_save])
+    else:
+        bot.send_message(message.chat.id, 'Я не знаю такую достопремичательность')
 bot.polling()
