@@ -93,4 +93,5 @@ def prod(message):
         bot.send_message(message.chat.id, dosto[message_to_save])
     else:
         bot.send_message(message.chat.id, 'Я не знаю такую достопремичательность')
+#run
 bot.polling()
