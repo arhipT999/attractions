@@ -84,7 +84,8 @@ def contin12(message):
         sent = bot.send_message(message.chat.id, "Первой будет Рыбная деревня")
         bot.register_next_step_handler(sent, contin) 
     if message.text=="Описать выбранную достопримечательность":
-        pass
+        sent = bot.send_message(message.chat.id, "Напиши название достопримечательности")
+        bot.register_next_step_handler(sent, prod)
 def prod(message):
     message_to_save = message.text
     message_to_save = message_to_save.lower()
